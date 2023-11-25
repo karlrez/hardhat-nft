@@ -65,5 +65,7 @@ export const networkConfig: NetworkConfigMap = {
     },
 }
 
+export const DECIMALS = "18"
+export const INITIAL_PRICE = "200000000000000000000"
 export const developmentChains: string[] = ["hardhat", "localhost"]
 export const VERIFICATION_BLOCK_CONFIRMATIONS = 6
