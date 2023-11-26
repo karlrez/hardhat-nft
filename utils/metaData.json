@@ -1,0 +1,56 @@
+{
+    "boy.png": {
+        "IpfsHash": "QmXkpLqmVCxmRZXKXJZUG8KbqYD8kNPbvDXogGxererb51",
+        "PinSize": 175,
+        "Timestamp": "2023-11-26T04:51:47.886Z",
+        "isDuplicate": true
+    },
+    "crazy_doctor.png": {
+        "IpfsHash": "QmZyHeGqDyrcUJgJ7zYHtCsH7u1A6JYJEujmkP7D1cASzu",
+        "PinSize": 193,
+        "Timestamp": "2023-11-26T04:51:48.435Z",
+        "isDuplicate": true
+    },
+    "cruel.png": {
+        "IpfsHash": "Qmb6U2KLZt2meqE4SdpCesFDfuU1i6viCf9EicwjAYvRF6",
+        "PinSize": 179,
+        "Timestamp": "2023-11-26T04:51:48.917Z",
+        "isDuplicate": true
+    },
+    "detective.png": {
+        "IpfsHash": "QmUYe8iGQEBnfFhAAKopAeui6sKHNhZGdiD6G8z8wSfvJV",
+        "PinSize": 187,
+        "Timestamp": "2023-11-26T04:51:49.325Z",
+        "isDuplicate": true
+    },
+    "karate.png": {
+        "IpfsHash": "QmQptdhrztxvEmS3fjvvVmwZ3AoeMVYSFcHJtkddAqJ1hp",
+        "PinSize": 181,
+        "Timestamp": "2023-11-26T04:51:50.005Z",
+        "isDuplicate": true
+    },
+    "king.png": {
+        "IpfsHash": "QmUPiwVcbHPyTzKUYs9Vys2rQ7wV4VTj82SzkCNx2wRtmS",
+        "PinSize": 177,
+        "Timestamp": "2023-11-26T04:51:50.463Z",
+        "isDuplicate": true
+    },
+    "monster.png": {
+        "IpfsHash": "QmUMcuDvyw16Jb9kwWTyKnqwrJ5yNsAd8bnqrTdka61uw6",
+        "PinSize": 183,
+        "Timestamp": "2023-11-26T04:51:50.979Z",
+        "isDuplicate": true
+    },
+    "rich.png": {
+        "IpfsHash": "QmaZQtFHgNDiBnYakvYWdfP9DwojRnymHn9FkgDnG2a6BU",
+        "PinSize": 177,
+        "Timestamp": "2023-11-26T04:51:51.526Z",
+        "isDuplicate": true
+    },
+    "trainer.png": {
+        "IpfsHash": "QmYwqxTQWQ6iHzDkNM1Q6o73WGrLhKooe1b1w4zUZDpwYT",
+        "PinSize": 183,
+        "Timestamp": "2023-11-26T04:51:52.014Z",
+        "isDuplicate": true
+    }
+}
