@@ -6,7 +6,6 @@ import "@nomicfoundation/hardhat-chai-matchers"
 import "hardhat-deploy"
 import "hardhat-contract-sizer"
 import "@appliedblockchain/chainlink-plugins-fund-link"
-import "./tasks"
 
 dotenv.config()
 
@@ -75,6 +74,7 @@ const config: HardhatUserConfig = {
             mainnet: ETHERSCAN_API_KEY,
             polygon: POLYGONSCAN_API_KEY,
         },
+        customChains: [],
     },
     gasReporter: {
         enabled: process.env.REPORT_GAS !== undefined,

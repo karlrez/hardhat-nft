@@ -12,8 +12,8 @@ import dotenv from "dotenv"
 dotenv.config()
 
 const JWT = process.env.PINATA_JWT
-const directoryPath = "./images/"
-const outputDirectory = "./scripts/uploadToPinataResult/"
+const directoryPath = "./scripts/pinata/images/"
+const outputDirectory = "./scripts/pinata/uploadToPinataResult/"
 
 const pinFileToIPFS = async (fileName: string) => {
     const formData = new FormData()
