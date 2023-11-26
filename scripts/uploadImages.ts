@@ -18,13 +18,7 @@ interface PinataResponses {
 
 const JWT = process.env.PINATA_JWT
 const directoryPath = "./images/"
-const outputDirectory = "./utils/"
-const METADATA_TEMPLATE = {
-    name: "Name of NFT",
-    description: "Description of NFT",
-    external_url: "https://pinata.cloud",
-    image: "ipfs://CID_GOES_HERE",
-}
+const outputDirectory = "./scripts/"
 
 const pinFileToIPFS = async (fileName: string) => {
     const formData = new FormData()
@@ -60,7 +54,7 @@ const pinFileToIPFS = async (fileName: string) => {
     }
 }
 
-export const uploadFiles = async () => {
+const uploadFiles = async () => {
     let responses: PinataResponses = {}
     try {
         // read in files from image directory
@@ -75,48 +69,13 @@ export const uploadFiles = async () => {
             } else {
                 responses[fileName] = res
             }
-
-            // Create the output directory if it doesn't exist
-            if (!fs.existsSync(outputDirectory)) {
-                fs.mkdirSync(outputDirectory, { recursive: true })
-            }
         }
         // create json file of the responses
         const outputFile = path.join(outputDirectory, "uploadResponses.json")
         fs.writeFileSync(outputFile, JSON.stringify(responses))
-
-        return responses
     } catch (err) {
         console.error("Error reading directory:", err)
     }
 }
 
-export const uploadMetaData = async (files: PinataResponses) => {
-    for (const [key, value] of Object.entries(files)) {
-        const nftName = key.slice(0, key.lastIndexOf("."))
-        const data = JSON.stringify({
-            pinataContent: {
-                name: `${nftName} NFT`,
-                description: `A cool NFT of a ${nftName} martian`,
-                external_url: "https://pinata.cloud",
-                image: `ipfs://${value.IpfsHash}`,
-            },
-            pinataMetadata: {
-                name: `${nftName}.json`,
-            },
-        })
-
-        try {
-            console.log(`uploading metadata for ${key} -----------------`)
-            const res = await axios.post("https://api.pinata.cloud/pinning/pinJSONToIPFS", data, {
-                headers: {
-                    "Content-Type": "application/json",
-                    Authorization: JWT,
-                },
-            })
-            // console.log(res.data)
-        } catch (error) {
-            console.log(error)
-        }
-    }
-}
+uploadFiles()

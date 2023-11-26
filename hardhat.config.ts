@@ -6,6 +6,7 @@ import "@nomicfoundation/hardhat-chai-matchers"
 import "hardhat-deploy"
 import "hardhat-contract-sizer"
 import "@appliedblockchain/chainlink-plugins-fund-link"
+import "./tasks"
 
 dotenv.config()
 
@@ -37,6 +38,7 @@ const config: HardhatUserConfig = {
                 enabled: false,
             },
             chainId: 31337,
+            gasPrice: 130000000000,
         },
         localhost: {
             chainId: 31337,
@@ -49,6 +51,7 @@ const config: HardhatUserConfig = {
             //   },
             saveDeployments: true,
             chainId: 11155111,
+            gasPrice: 130000000000,
         },
         mainnet: {
             url: MAINNET_RPC_URL,
@@ -99,7 +102,7 @@ const config: HardhatUserConfig = {
     solidity: {
         compilers: [
             {
-                version: "0.8.20",
+                version: "0.8.7", // first is default compiler
             },
             {
                 version: "0.6.6",
